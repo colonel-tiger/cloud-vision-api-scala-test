@@ -1,2 +1,2 @@
 # cloud-vision-api-scala-test
-画像認識のテスト
+画像認識のテストプロジェクト
