@@ -28,7 +28,7 @@ object ImageAPI {
     val data = Files.readAllBytes(Paths.get(path))
     val image = new Image().encodeContent(data)
     val feature =
-      new Feature().setType("DOCUMENT_TEXT_DETECTION").setMaxResults(maxResults)
+      new Feature().setType("TEXT_DETECTION").setMaxResults(maxResults)
     val request = new AnnotateImageRequest()
       .setImage(image)
       .setFeatures(ImmutableList.of(feature))

@@ -5,7 +5,7 @@ import processing.core._
 class TextDetectionApplet extends PApplet {
   val src = "ファイルパスを書く"
   override def settings() {
-    size(2400, 1000)
+    size(1400, 1000)
   }
 
   override def setup() {
@@ -14,7 +14,7 @@ class TextDetectionApplet extends PApplet {
     val img = loadImage(src)
     image(img, 0, 0, img.width / 2, img.height / 2)
 
-    val vision = ImageAPI.createVision("document text detection")
+    val vision = ImageAPI.createVision("text detection")
     val annotate = ImageAPI.createAnnotate(vision, src, 10)
     val texts = ImageAPI.detectTexts(annotate)
 
